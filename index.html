@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
+  <meta property="og:title" content="Dreamix: Video Diffusion Models are General Video Editors"/>
+  <meta property="og:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video."/>
+  <meta property="og:url" content="https://dreamix-video-editing.github.io"/>
+  <meta property="og:image" content="static/image/og_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Dreamix: Video Diffusion Models are General Video Editors">
+  <meta name="twitter:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
+  <meta name="twitter:image" content="static/images/twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Video diffusion models, video editing, dreamix, dreambooth, imagen-video">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Dreamix: Video Diffusion Models are General Video Editors</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Dreamix: Video Diffusion Models are General Video Editors</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Anonymous Authors
+              </span>
+              <!-- <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+              </span> -->
+            </div>
+
+  <!--           <div class="is-size-5 publication-authors">
+              <span class="author-block">Institution Name<br>Conferance name and year</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+
+
+            <!-- ArXiv abstract Link -->
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Subject Driven Video Generation carousel -->
+<section class="hero teaser">
+      <div class="hero-body ">
+    <div class="container is-max-desktop">
+  
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/banner_video.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+        Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video. Here, Dreamix turns the eating monkey (left) to a dancing bear (right) given the prompt “A bear dancing and jumping to upbeat music, moving his whole body“.
+      </h2>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/img2vid_turtle.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+        Dreamix can create videos based on image and text inputs. In this example it is able to instill complex motion in a static image, adding a moving shark and making the turtle swim. In this case, visual fidelity to object location and background was preserved but the turtle direction was flipped.
+      </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/subj_driv_lifting.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          Given a small collection of images showing the same subject, Dreamix can generate new videos with the subject in motion. In this example, given a small number of images of the toy fireman, Dreamix is able to extract the visual features then animate it to lift weights while maintaining fidelity and temporal consistency.
+      </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Subject Driven Video Generation carousel -->
+
+
+
+
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-driven image and video diffusion models have recently achieved unprecedented generation realism. While diffusion models have been successfully applied for image editing, very few works have done so for video editing. We present the first diffusion-based method that is able to perform text-based motion and appearance editing of general videos. Our approach uses a video diffusion model to combine, at inference time, the low-resolution spatio-temporal information from the original video with new, high resolution information that it synthesized to align with the guiding text-prompt. As obtaining high-fidelity to the original video requires retaining some of its high-resolution information, we add a preliminary stage of finetuning the model on the original video, significantly boosting fidelity. We propose to improve motion editability by a new, mixed objective that jointly finetunes with full temporal attention and with temporal attention masking. We further introduce a new framework for image animation. We first transform the image into a coarse video by simple image processing operations such as replication and perspective geometric projections, and then use our general video editor to animate it. As a further application, we can use our method for subject-driven video generation. Extensive qualitative and numerical experiments showcase the remarkable editing ability of our method and establish its superior performance compared to baseline methods.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Vid2vid carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3">Video Editing</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_leaping.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_party_hat.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_robot.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_cake.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_orangutan_hello.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video6">
+          <video poster="" id="video6" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_truck_zoom.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-video7">
+          <video poster="" id="video7" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_fire.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-video8">
+          <video poster="" id="video8" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_cats.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-video9">
+          <video poster="" id="video9" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_skateboard.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-video10">
+          <video poster="" id="video10" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_truck_logs.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video11">
+          <video poster="" id="video11" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_noodles.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video12">
+          <video poster="" id="video12" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_circle.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video13">
+          <video poster="" id="video13" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_orangutan_hello2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-video14">
+          <video poster="" id="video14" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_football.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-video15">
+          <video poster="" id="video15" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_orangutan_bath.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video16">
+          <video poster="" id="video16" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_truck_river.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video17">
+          <video poster="" id="video17" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_swans.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video18">
+          <video poster="" id="video18" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/vid2vid_saxophone.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End vid2vid carousel -->
+
+
+<!-- Img2vid carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3">Image-to-Video</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_plant.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_buffalo.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_grizzly.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_coffee.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+      <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_camel.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      <div class="item item-video6">
+          <video poster="" id="video6" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_pengiun.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      <div class="item item-video7">
+          <video poster="" id="video7" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_unicorn.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+      <div class="item item-video8">
+          <video poster="" id="video8" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/img2vid_bigfoot.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End img2vid carousel -->
+
+
+<!-- Subject Driven Video Generation carousel -->
+<section class="hero is-small">
+  <div class="hero-body ">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Subject Driven Video Generation</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/subj_driv_walking.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="90%">
+            <!-- Your video file here -->
+            <source src="static/videos/subj_driv_drinking.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/subj_driv_dancing.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/subj_driv_stretching.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="90%">\
+            <!-- Your video file here -->
+            <source src="static/videos/subj_driv_magnifying.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Subject Driven Video Generation carousel -->
+
+
+
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Method Overview: Mixed Video-Image Finetuning</h2>
+          <center>
+          <img src="static/images/architecture_finetune.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <p>
+               Finetuning the video diffusion model on the input video alone limits the extent of motion change. Instead, we use a mixed objective that beside the original objective (bottom left) also finetunes on the unordered set of frames. This is done by using “masked temporal attention”, preventing the temporal attention and convolution from being finetuned (bottom right). This allows adding motion to a static video.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Inference Overview</h2>
+          <center>
+          <img src="static/images/architecture_applications_extended.png" alt="Inference Overview" class="center-image"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <p>
+               Our method supports multiple applications by application dependent pre-processing (left), converting the input content into a uniform video format. For image-to-video, the input image is duplicated and transformed using perspective transformations, synthesizing a coarse video with some camera motion. For subject driven video generation, the input is omitted -  finetuning alone take care of the fidelity.
+               This coarse video is then edited using our general ``Dreamix Video Editor`` (right): we first corrupt the video by downsampling followed by adding noise. We then apply the finetuned text-guided video diffusion model, which upscales the video to the final spatio-temporal resolution
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+          <div class="publication-video">
+            <!-- Youtube embed code here -->
+            <iframe src="https://www.youtube.com/embed/xcvnHhfDSGM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+<!--BibTex citation -->
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>BibTex Code Here</code></pre>
+  </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- Default Statcounter code for Dreamix
+https://dreamix-video-editing.github.io -->
+<script type="text/javascript">
+var sc_project=12843789; 
+var sc_invisible=1; 
+var sc_security="e9c3bf5f"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12843789/0/e9c3bf5f/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
