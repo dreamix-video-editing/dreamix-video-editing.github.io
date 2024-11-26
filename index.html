@@ -165,16 +165,16 @@
 </section>
 <!-- End paper abstract -->
 
-<section class="section is-small">
+<section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Adversarial Testing Paradigm</h2>
           <center>
+          <h2 class="title is-3">Background</h2>
           <img src="static/images/adversarial_test_paradigm.png" alt="Inference Overview" class="center-image" style="transform: scale(0.65); transform-origin: top center;"/>
           </center>
-          <div class="level-set has-text-justified" style="margin-top: -180px; margin-bottom: 0;"">
+          <div class="level-set has-text-justified" style="margin-top: -180px; margin-bottom: 0;">
             <br>
             <p>
               Figure illustrates the adversarial test paradigm levels. Level 1 applies patches offline to image datasets for object detection, dominating existing research but lacking realism. Level 2 introduces more realistic scenarios by analyzing recorded attacked image frames but lacks real-time validation. Level 3 addresses this gap by enabling real-time adversarial testing within simulation environments, crucial for autonomous vehicle evaluation and often overlooked in existing studies.
@@ -186,19 +186,78 @@
   </div>
 </section>
 
-<section class="section hero is-small is-light">
+<!-- Our Contribution -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-narrow" style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; margin-right: 30px;">
+        <h2 class="title is-3">Our Contribution</h2>
+      </div>
+      <ul style="list-style-type: disc; margin-left: 30px;">
+        <li style="margin-bottom: 10px;">
+          <strong>Motivation and Framework Proposal:</strong> Identified the need for Level 3 adversarial patch testing and addressed the absence of existing frameworks by introducing AVATAR, enabling dynamic robustness evaluation for AVs.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>Dataset and Model Preparation:</strong> Generated the CARLA Town 10HD (CART) dataset and trained object detection models along with adversarial patches specific to Town 10 in CARLA.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>Simulation and Patch Integration:</strong> Integrated trained adversarial patches into the CARLA environment by modifying asset blueprints and developed the AVATAR framework for real-time dynamic evaluation.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>User Interface Development:</strong> Designed a GUI for configuring test parameters, setting up experiments, and running simulations in CARLA.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>Adversarial Trace Detection:</strong> Proposed the Adversarial Trace Classifier (ATC) to predict the presence of adversarial patches post-simulation, ensuring fair and unbiased evaluation
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- End Our Contribution -->
+
+
+<!-- Patch as Material Asset into CARLA -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Adversarial Patch in Carla as a Material Asset</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-fifths">
+              <!-- Image embed code here -->
+              <img src="static/images/materialblp.png" alt="material blp" style="transform: scale(1);"/>
+          </div>
+          <div class="column is-three-fifths">
+            <!-- Image embed code here -->
+            <img src="static/images/vehicle_blp.png" alt="vehicle blp" style="transform: scale(0.9); transform-origin: top center;"/>
+          </div>
+        </div>
+        <div class="level-set has-text-justified" style="margin-top: -50px; margin-bottom: 0;">
+          <br>
+          <p>
+            The adversarial patch can be attached to a CARLA actor (e.g., a moving vehicle) or placed statically in the map. The process begins by converting the trained patch image (.png/.jpeg) into a CARLA asset (.uasset) via Unreal Engine (UE). A material instance is created in UE with high roughness and opacity for optimal visibility. Once converted, the patch can be applied to any CARLA asset. For example, as shown in Figure, the patch is affixed to a vehicle’s board, enabling realistic evaluation of its impact on object detection in dynamic, near-real-world scenarios. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Patch as Material Asset into CARLA -->
+
+<section class="section hero is-small is-light"">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
           <h2 class="title is-3">AVATAR Block Diagram</h2>
           <center>
-          <img src="static/images/avatar_block_diagram.png" alt="Block Diagram" class="center-image blend-img-background"/>
+          <img src="static/images/avatar_block_diagram.png" alt="Block Diagram" class="center-image blend-img-background" style="transform: scale(0.9);"/>
           </center>
           <div class="level-set has-text-justified">
             <br>
             <p>
-              The AVATAR framework is a step toward Level 3 of the adversarial testing paradigm, replicating real-world conditions for testing AVs. It provides an abstraction over the CARLA PythonAPI Client, with a Tkinter-based GUI featuring four components: CARLA Server Configuration (connects the server, sets SEED, mode, and FPS), CARLA World Setting (configures resolution, town, weather, pedestrians, and vehicles), CARLA Actor Setting (sets car model, agent type/behavior, and detection model), and Adversarial Attack Setting (chooses attack type, magnitude, and patch placement on vehicles or billboards). AVATAR enhances adversarial patch testing for autonomous vehicles, ensuring realistic, reproducible, and customizable simulations.
+              The AVATAR framework advances Level 3 of adversarial testing by replicating real-world conditions for AV testing. It abstracts the CARLA PythonAPI Client, allowing users to configure parameters and generate a setup file. This file initializes the CARLA environment, loads the object detection model, and applies adversarial patches for experiments. The PyGame window then visualizes the system's behavior under attack in the CARLA simulation. AVATAR enhances adversarial patch testing for autonomous vehicles, ensuring realistic, reproducible, and customizable simulations.
             </p>
           </div>
         </div>
@@ -206,29 +265,60 @@
     </div>
   </div>
 </section>
-
 <!-- Youtube video -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
       <!-- Paper video. -->
       <h2 class="title is-3">AVATAR GUI in CARLA</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-two-fifths">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-fifths">
             <!-- GUI Image embed code here -->
             <img src="static/images/avatar_gui.png" alt="AVATAR GUI" style="transform: scale(0.87); transform-origin: top center;"/>
-        </div>
-        <div class="column is-three-fifths">
-          <div class="publication-video" style="display: inline-block; transform: scale(0.85); transform-origin: top center;">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/g-AqOTro-fY?si=7q17FKDAFmSDrECI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
+          <div class="column is-three-fifths">
+            <div class="publication-video" style="display: inline-block; transform: scale(0.85); transform-origin: top center;">
+              <!-- Youtube embed code here -->
+              <iframe src="https://www.youtube.com/embed/g-AqOTro-fY?si=7q17FKDAFmSDrECI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="level-set has-text-justified" style="margin-top: -80px; margin-bottom: 0;">
+          <br>
+          <p>
+            Tkinter-based GUI featuring four components: CARLA Server Configuration (connects the server, sets seed, mode, and FPS), CARLA World Setting (configures resolution, town, weather, pedestrians, and vehicles), CARLA Actor Setting (sets car model, agent type/behavior, and detection model), and Adversarial Attack Setting (chooses attack type, magnitude, and patch placement on vehicles or billboards). 
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- End youtube video -->
+
+<!-- Adversarial trace Classifier Results -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <!-- Paper video. -->
+      <h2 class="title is-3">Adversarial Trace Classifier</h2>
+        <div class="columns is-centered has-text-centered" style="margin-bottom: -150px;">
+          <div class="column is-three-fifths">
+              <!-- Image embed code here -->
+              <img src="static/images/atc.jpg" alt="atc" style="transform: scale(0.85); transform-origin: top center;"/>
+              <img src="static/images/kde_plot.png" alt="atc" style="transform: scale(0.5); transform-origin: top center; margin-top: -70px; margin-bottom: 0;"/>
+          </div>
+          <div class="column is-two-fifths">
+            <!-- Image embed code here -->
+            <img src="static/images/results_trace.jpg" alt="result" style="transform: scale(1); transform-origin: top center;"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Adversarial trace Classifier Results -->
 
 
 <!-- Youtube video -->
@@ -240,7 +330,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
 
-          <div class="publication-video" style="display: inline-block; transform: scale(0.8); transform-origin: top center;">
+          <div class="publication-video" style="display: inline-block; transform: scale(0.8); transform-origin: top center;  margin-bottom: -80px;">
             <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/w9M6zNpd9Es?si=XcHGbTthqdhHrX-4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
