@@ -91,7 +91,7 @@
 
             <!-- ArXiv abstract Link -->
             <span class="link-block">
-              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10646575" target="_blank"
+              <a href="https://ieeexplore.ieee.org/abstract/document/10646575/" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="ai ai-arxiv"></i>
@@ -381,13 +381,13 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Method Overview: Mixed Video-Image Finetuning</h2>
+          <h2 class="title is-3">AVATAR Block Diagram</h2>
           <center>
-          <img src="static/images/architecture_finetune.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
+          <img src="static/images/avatar_block_diagram.png" alt="Block Diagram" class="center-image blend-img-background"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-               Finetuning the video diffusion model on the input video alone limits the extent of motion change. Instead, we use a mixed objective that beside the original objective (bottom left) also finetunes on the unordered set of frames. This is done by using “masked temporal attention”, preventing the temporal attention and convolution from being finetuned (bottom right). This allows adding motion to a static video.
+              The AVATAR framework is a step toward Level 3 of the adversarial testing paradigm, replicating real-world conditions for testing AVs. It provides an abstraction over the CARLA PythonAPI Client, with a Tkinter-based GUI featuring four components: CARLA Server Configuration (connects the server, sets SEED, mode, and FPS), CARLA World Setting (configures resolution, town, weather, pedestrians, and vehicles), CARLA Actor Setting (sets car model, agent type/behavior, and detection model), and Adversarial Attack Setting (chooses attack type, magnitude, and patch placement on vehicles or billboards). AVATAR enhances adversarial patch testing for autonomous vehicles, ensuring realistic, reproducible, and customizable simulations.
             </p>
           </div>
         </div>
@@ -403,14 +403,13 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Inference Overview</h2>
+          <h2 class="title is-3">Adversarial Testing Paradigm</h2>
           <center>
-          <img src="static/images/architecture_applications_extended.png" alt="Inference Overview" class="center-image"/>
+          <img src="static/images/adversarial_test_paradigm.png" alt="Inference Overview" class="center-image"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-               Our method supports multiple applications by application dependent pre-processing (left), converting the input content into a uniform video format. For image-to-video, the input image is duplicated and transformed using perspective transformations, synthesizing a coarse video with some camera motion. For subject driven video generation, the input is omitted -  finetuning alone take care of the fidelity.
-               This coarse video is then edited using our general ``Dreamix Video Editor`` (right): we first corrupt the video by downsampling followed by adding noise. We then apply the finetuned text-guided video diffusion model, which upscales the video to the final spatio-temporal resolution
+              Figure illustrates the adversarial test paradigm levels. Level 1 applies patches offline to image datasets for object detection, dominating existing research but lacking realism. Level 2 introduces more realistic scenarios by analyzing recorded attacked image frames but lacks real-time validation. Level 3 addresses this gap by enabling real-time adversarial testing within simulation environments, crucial for autonomous vehicle evaluation and often overlooked in existing studies.
             </p>
           </div>
         </div>
@@ -419,6 +418,26 @@
   </div>
 </section>
 
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">AVATAR GUI in CARLA</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+          <div class="publication-video">
+            <!-- Youtube embed code here -->
+            <iframe src="https://youtu.be/g-AqOTro-fY?si=Zpt7blBfb5tRM9Wq" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
 
 
 <!-- Youtube video -->
@@ -426,13 +445,13 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Real World Demonstration</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
 
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/xcvnHhfDSGM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://youtu.be/5MRjvLdCy-M?si=EWS5rNCuJDu_Zis9" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -447,11 +466,13 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{molad2023dreamix,
-  title={Dreamix: Video Diffusion Models are General Video Editors},
-  author={Molad, Eyal and Horwitz, Eliahu and Valevski, Dani and Acha, Alex Rav and Matias, Yossi and Pritch, Yael and Leviathan, Yaniv and Hoshen, Yedid},
-  journal={arXiv preprint arXiv:2302.01329},
-  year={2023}
+    <pre><code>@article{sharma2024avatar,
+      title={AVATAR: Autonomous Vehicle Assessment through Testing of Adversarial Patches in Real-time},
+      author={Sharma, Abhijith and Narayan, Apurva and Azad, Nasser Lashgarian and Fischmeister, Sebastian and Marksteiner, Stefan},
+      journal={IEEE Transactions on Intelligent Vehicles},
+      year={2024},
+      publisher={IEEE}
+    }
 }</code></pre>
   </div>
 </section>
@@ -461,7 +482,7 @@
 <section class="section" id="Acknowledgements">
   <div class="container is-max-desktop content">
     <h2 class="title">Acknowledgements</h2>
-  We thank Ely Sarig for creating the video, Jay Tenenbaum for the video narration, Amir Hertz for the implementation of our eval baseline, Daniel Cohen-Or, Assaf Zomet, Eyal Segalis, Matan Kalman and Emily Denton for their valuable inputs that helped improve this work.
+    We extend our gratitude to the members of the <a href="https://uwaterloo.ca/embedded-software-group/" target="_blank">Real-time Embedded Software Group</a>@ UWaterloo for their invaluable insights, critical brainstorming sessions, and innovative ideas that greatly contributed to this work.
   </div>
 </section>
 <!--End Acknowledgements -->
