@@ -110,22 +110,25 @@
 
 <!-- Subject Driven Video Generation carousel -->
 <section class="hero teaser">
-  <div class="hero-body ">
-    <div class="container is-max-desktop">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay muted loop playsinline height="100%" src="static/videos/real_world_demo.mp4">
+  <div class="hero-body">
+          <video 
+            id="header-video1" 
+            poster="" 
+            style="transform: scale(0.7); transform-origin: top center;"
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            controls>
+            <source src="static/videos/real_world_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
-          <h2 class="subtitle has-text-centered">
-            The video shows shows physical real world testing with the adversarial patch. On the left, the patch is validated on a treadmill based test-bed with toy car, and on the right, the patch is applied on a real car moving in an outdoor environment
+          <h2 class="subtitle has-text-centered" style="transform: scale(0.9); margin-top: -100px; margin-bottom: 0;">
+            The video shows physical real-world testing with the adversarial patch. On the left, the patch is validated on a treadmill-based test-bed with a toy car, and on the right, the patch is applied to a real car moving in an outdoor environment.
           </h2>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 <!-- End Subject Driven Video Generation carousel -->
-
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -162,6 +165,27 @@
 </section>
 <!-- End paper abstract -->
 
+<section class="section is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Adversarial Testing Paradigm</h2>
+          <center>
+          <img src="static/images/adversarial_test_paradigm.png" alt="Inference Overview" class="center-image" style="transform: scale(0.65); transform-origin: top center;"/>
+          </center>
+          <div class="level-set has-text-justified" style="margin-top: -180px; margin-bottom: 0;"">
+            <br>
+            <p>
+              Figure illustrates the adversarial test paradigm levels. Level 1 applies patches offline to image datasets for object detection, dominating existing research but lacking realism. Level 2 introduces more realistic scenarios by analyzing recorded attacked image frames but lacks real-time validation. Level 3 addresses this gap by enabling real-time adversarial testing within simulation environments, crucial for autonomous vehicle evaluation and often overlooked in existing studies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section hero is-small is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -183,39 +207,19 @@
   </div>
 </section>
 
-
-
-<section class="section is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Adversarial Testing Paradigm</h2>
-          <center>
-          <img src="static/images/adversarial_test_paradigm.png" alt="Inference Overview" class="center-image" style="transform: scale(0.6); transform-origin: center;"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <br>
-            <p>
-              Figure illustrates the adversarial test paradigm levels. Level 1 applies patches offline to image datasets for object detection, dominating existing research but lacking realism. Level 2 introduces more realistic scenarios by analyzing recorded attacked image frames but lacks real-time validation. Level 3 addresses this gap by enabling real-time adversarial testing within simulation environments, crucial for autonomous vehicle evaluation and often overlooked in existing studies.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
       <h2 class="title is-3">AVATAR GUI in CARLA</h2>
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <div class="publication-video" style="display: inline-block; transform: scale(0.7); transform-origin: top center;">
+        <div class="column is-two-fifths">
+            <!-- GUI Image embed code here -->
+            <img src="static/images/avatar_gui.png" alt="AVATAR GUI" style="transform: scale(0.87); transform-origin: top center;"/>
+        </div>
+        <div class="column is-three-fifths">
+          <div class="publication-video" style="display: inline-block; transform: scale(0.85); transform-origin: top center;">
             <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/g-AqOTro-fY?si=7q17FKDAFmSDrECI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
@@ -232,13 +236,13 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Real World Demonstration</h2>
+      <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
 
-          <div class="publication-video" style="display: inline-block; transform: scale(0.7); transform-origin: top center;">
+          <div class="publication-video" style="display: inline-block; transform: scale(0.8); transform-origin: top center;">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/5MRjvLdCy-M?si=sMjHCzATN27iWJru" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/w9M6zNpd9Es?si=XcHGbTthqdhHrX-4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
