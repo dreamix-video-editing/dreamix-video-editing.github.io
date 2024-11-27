@@ -186,34 +186,34 @@
   </div>
 </section>
 
-<!-- Our Contribution -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-narrow" style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; margin-right: 30px;">
-        <h2 class="title is-3">Our Contribution</h2>
+  <!-- Our Contribution -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-narrow" style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; margin-right: 30px;">
+          <h2 class="title is-3">Our Contribution</h2>
+        </div>
+        <ul style="list-style-type: disc; margin-left: 30px;">
+          <li style="margin-bottom: 10px;">
+            <strong>Motivation and Framework Proposal:</strong> Identified the need for Level 3 adversarial patch testing and addressed the absence of existing frameworks by introducing AVATAR, enabling dynamic robustness evaluation for AVs.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>Dataset and Model Preparation:</strong> Generated the CARLA Town 10HD (CART) dataset and trained object detection models along with adversarial patches specific to Town 10 in CARLA.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>Simulation and Patch Integration:</strong> Integrated trained adversarial patches into the CARLA environment by modifying asset blueprints and developed the AVATAR framework for real-time dynamic evaluation.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>User Interface Development:</strong> Designed a GUI for configuring test parameters, setting up experiments, and running simulations in CARLA.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>Adversarial Trace Detection:</strong> Proposed the Adversarial Trace Classifier (ATC) to predict the presence of adversarial patches post-simulation, ensuring fair and unbiased evaluation
+          </li>
+        </ul>
       </div>
-      <ul style="list-style-type: disc; margin-left: 30px;">
-        <li style="margin-bottom: 10px;">
-          <strong>Motivation and Framework Proposal:</strong> Identified the need for Level 3 adversarial patch testing and addressed the absence of existing frameworks by introducing AVATAR, enabling dynamic robustness evaluation for AVs.
-        </li>
-        <li style="margin-bottom: 10px;">
-          <strong>Dataset and Model Preparation:</strong> Generated the CARLA Town 10HD (CART) dataset and trained object detection models along with adversarial patches specific to Town 10 in CARLA.
-        </li>
-        <li style="margin-bottom: 10px;">
-          <strong>Simulation and Patch Integration:</strong> Integrated trained adversarial patches into the CARLA environment by modifying asset blueprints and developed the AVATAR framework for real-time dynamic evaluation.
-        </li>
-        <li style="margin-bottom: 10px;">
-          <strong>User Interface Development:</strong> Designed a GUI for configuring test parameters, setting up experiments, and running simulations in CARLA.
-        </li>
-        <li style="margin-bottom: 10px;">
-          <strong>Adversarial Trace Detection:</strong> Proposed the Adversarial Trace Classifier (ATC) to predict the presence of adversarial patches post-simulation, ensuring fair and unbiased evaluation
-        </li>
-      </ul>
     </div>
-  </div>
-</section>
-<!-- End Our Contribution -->
+  </section>
+  <!-- End Our Contribution -->
 
 
 <!-- Patch as Material Asset into CARLA -->
@@ -314,6 +314,16 @@
             <img src="static/images/results_trace.jpg" alt="result" style="transform: scale(1); transform-origin: top center;"/>
           </div>
         </div>
+        <div>
+          <ul style="list-style-type: disc; margin-left: 30px;">
+            <li style="margin-bottom: 10px;">Simulations were conducted to evaluate YOLO's confidence scores for detecting vehicles under normal and adversarial conditions.</li>
+            <li style="margin-bottom: 10px;">Normal conditions showed consistent confidence scores (&gt;85%) across diverse weather and lighting scenarios, indicating model robustness.</li>
+            <li style="margin-bottom: 10px;">Adversarial patches caused significant confidence drops and higher variance, especially under optimal lighting (clear noon).</li>
+            <li style="margin-bottom: 10px;">Adversarial patch effectiveness reduced in poor visibility scenarios like rain, dust storms, and nighttime conditions.</li>
+            <li style="margin-bottom: 10px;">Statistical analysis included 100 traces: 40 nominal and 60 adversarial, with random vehicle starting points.</li>
+            <li style="margin-bottom: 10px;">Kernel Density Estimation (KDE) effectively distinguished nominal (tight cluster) and anomalous traces (spread peaks).</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -324,7 +334,7 @@
 <!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-centered has-text-centered" style="margin-bottom: 20px;">
       <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
