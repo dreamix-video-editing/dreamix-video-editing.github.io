@@ -2,24 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
-  <meta property="og:title" content="Dreamix: Video Diffusion Models are General Video Editors"/>
-  <meta property="og:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video."/>
-  <meta property="og:url" content="https://dreamix-video-editing.github.io"/>
-  <meta property="og:image" content="static/image/og_banner_image.png" />
+  <meta name="description" content="Framework to test adversarial patches in CARLA and in the real world">
+  <meta property="og:title" content="AVATAR: Autonomous Vehicle Assessment through Testing of Adversarial Patches in Real-time"/>
+  <meta property="og:description" content="Framework to test adversarial patches in CARLA and in the real world"/>
+  <meta property="og:url" content="https://sharmaabhijith.github.io/avatar_webpage/"/>
+  <meta property="og:image" content="static/image/avatar_block_diagram.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="Dreamix: Video Diffusion Models are General Video Editors">
-  <meta name="twitter:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
-  <meta name="twitter:image" content="static/images/twitter_banner_image.png">
+  <meta name="twitter:title" content="AVATAR: Autonomous Vehicle Assessment through Testing of Adversarial Patches in Real-time">
+  <meta name="twitter:description" content="Framework to test adversarial patches in CARLA and in the real world">
+  <meta name="twitter:image" content="static/image/avatar_block_diagram.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="Video diffusion models, video editing, dreamix, dreambooth, imagen-video">
+  <meta name="keywords" content="autonomous driving, vehicle safety, adversarial testing, object detection">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Dreamix: Video Diffusion Models are General Video Editors</title>
+  <title>AVATAR: Autonomous Vehicle Assessment through Testing of Adversarial Patches in Real-time</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -47,39 +47,31 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Dreamix: Video Diffusion Models are General Video Editors</h1>
+            <h1 class="title is-1 publication-title">AVATAR: Autonomous Vehicle Assessment through Testing of Adversarial Patches in Real-time</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-             <span class="author-block">
-                Eyal Molad<sup>*,1</sup>,
+              <span class="author-block">
+                <a href="https://sharmaabhijith.github.io" target="_blank">Abhijith Sharma</a><sup>*,1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://pages.cs.huji.ac.il/eliahu-horwitz/" target="_blank">Eliahu Horwitz</a><sup>*,1,2</sup>,
+                <a href="https://space.uwo.ca/people/our-members/narayan-apurva/index.html" target="_blank">Apurva Narayan</a><sup>†,2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/dani-valevski-a3b5936/" target="_blank">Dani Valevski</a><sup>*,1</sup>,
+                <a href="https://uwaterloo.ca/automation-intelligent-systems-group/profiles/nasser-lashgarian-azad" target="_blank">Nasser Azad</a><sup>†,1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/alexravacha" target="_blank">Alex Rav Acha</a><sup>1</sup>,
+                <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/sfischme" target="_blank">Sebastian Fischmeister</a><sup>†,1</sup>,
               </span>
               <span class="author-block">
-                Yossi Matias<sup>1</sup>,
-              </span>
-              <span class="author-block">
-                Yael Pritch<sup>1</sup>,
-              </span>
-              <span class="author-block">
-                 <a href="https://yanivle.github.io/" target="_blank">Yaniv Leviathan</a><sup>†,1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="http://www.cs.huji.ac.il/~ydidh" target="_blank">Yedid Hoshen</a><sup>†,1,2</sup>
+                <a href="https://www.linkedin.com/in/stefan-marksteiner-332a4184?originalSubdomain=at" target="_blank">Stefan Marksteiner</a><sup>3</sup>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Google Research,</span>
-              <span class="author-block"><sup>2</sup>The Hebrew University of Jerusalem</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution, <sup>†</sup>Indicates Equal Advising</small></span>
+              <span class="author-block"><sup>1</sup>University of Waterloo,</span>
+              <span class="author-block"><sup>2</sup>Western University,</span>
+              <span class="author-block"><sup>3</sup>AVL, Graz Austria</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Main Author, <sup>†</sup>Indicates Equal Advising</small></span>
               <span class="eql-cntrb"><small></small></span>
             </div>
 
@@ -87,26 +79,39 @@
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2302.01329.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.172165647.71183157/v2" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
                   </a>
                 </span>
-
-
-
-            <!-- ArXiv abstract Link -->
-            <span class="link-block">
-              <a href="https://arxiv.org/abs/2302.01329" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="ai ai-arxiv"></i>
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10646575/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>IEEE TIV</span>
+                  </a>
                 </span>
-                <span>arXiv</span>
-              </a>
-            </span>
+                <span class="link-block">
+                  <a href="https://sharmaabhijith.github.io/CARLA_Town10_Dataset/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>CARLA Town 10 Dataset</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://sharmaabhijith.github.io/avatar_experiment_setup/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-project-diagram"></i>
+                    </span>
+                    <span>Workflow Setup</span>
+                  </a>
+                </span>
           </div>
         </div>
       </div>
@@ -116,50 +121,27 @@
 </section>
 
 
-
-
-
-
-
-
 <!-- Subject Driven Video Generation carousel -->
 <section class="hero teaser">
-      <div class="hero-body ">
-    <div class="container is-max-desktop">
-  
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay muted loop playsinline height="100%" src="static/videos/banner_video.mp4">
+  <div class="hero-body">
+          <video 
+            id="header-video1" 
+            poster="" 
+            style="transform: scale(0.7); transform-origin: top center;"
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            controls>
+            <source src="static/videos/real_world_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
-          <h2 class="subtitle has-text-centered">
-        Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video. Here, Dreamix turns the eating monkey (left) to a dancing bear (right) given the prompt “A bear dancing and jumping to upbeat music, moving his whole body“.
-      </h2>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="header-video2" autoplay muted loop playsinline height="100%" src="static/videos/img2vid_turtle.mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-        Dreamix can create videos based on image and text inputs. In this example it is able to instill complex motion in a static image, adding a moving shark and making the turtle swim. In this case, visual fidelity to object location and background was preserved but the turtle direction was flipped.
-      </h2>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="header-video3" autoplay muted loop playsinline height="100%"  src="static/videos/subj_driv_lifting.mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-          Given a small collection of images showing the same subject, Dreamix can generate new videos with the subject in motion. In this example, given a small number of images of the toy fireman, Dreamix is able to extract the visual features then animate it to lift weights while maintaining fidelity and temporal consistency.
-      </h2>
-        </div>
-      </div>
-    </div>
+          <h2 class="subtitle has-text-centered" style="transform: scale(0.9); margin-top: -100px; margin-bottom: 0;">
+            The video shows physical real-world testing with the adversarial patch. On the left, the patch is validated on a treadmill-based test-bed with a toy car, and on the right, the patch is applied to a real car moving in an outdoor environment.
+          </h2>
   </div>
 </section>
 <!-- End Subject Driven Video Generation carousel -->
-
-
-
-
-
-
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -169,7 +151,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Text-driven image and video diffusion models have recently achieved unprecedented generation realism. While diffusion models have been successfully applied for image editing, very few works have done so for video editing. We present the first diffusion-based method that is able to perform text-based motion and appearance editing of general videos. Our approach uses a video diffusion model to combine, at inference time, the low-resolution spatio-temporal information from the original video with new, high resolution information that it synthesized to align with the guiding text-prompt. As obtaining high-fidelity to the original video requires retaining some of its high-resolution information, we add a preliminary stage of finetuning the model on the original video, significantly boosting fidelity. We propose to improve motion editability by a new, mixed objective that jointly finetunes with full temporal attention and with temporal attention masking. We further introduce a new framework for image animation. We first transform the image into a coarse video by simple image processing operations such as replication and perspective geometric projections, and then use our general video editor to animate it. As a further application, we can use our method for subject-driven video generation. Extensive qualitative and numerical experiments showcase the remarkable editing ability of our method and establish its superior performance compared to baseline methods.
+            Autonomy in vehicles is achieved using AI for
+            control and perception tasks. The visual inputs from camera
+            forms the foundation for subsequent control that follows. Existing
+            works have shown adversarial vulnerabilities during AI based
+            visual tasks. One major threat is adversarial patches, which can
+            impact decision making in autonomous vehicles (AVs). Current
+            evaluation methods often utilize static datasets with unrealistic
+            patch placements. This paper proposes a novel framework,
+            AVATAR, to standardize adversarial patch testing and analysis.
+            AVATAR creates a simulation environment, where the patch is
+            integrated with actors in the scene to enhance realism during
+            testing. The vehicle’s behaviour is captured as a time-series
+            trace for post-simulation quantitative analysis. Furthermore, we
+            introduce an Adversarial Trace Classifier (ATC) that analyzes
+            these traces to predict the potential presence of adversarial
+            patches. The aim is to detect vulnerabilities in object detection
+            algorithms for the design of robust perception system for AVs.
+            Hence, AVATAR will pave the way for safer deployment of
+            autonomous vehicles in real-world.
           </p>
         </div>
       </div>
@@ -178,251 +178,216 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Vid2vid carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3">Video Editing</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="vid2vid_video1" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_leaping.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="vid2vid_video2" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_party_hat.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="vid2vid_video3" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_robot.mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="vid2vid_video4" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_cake.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video5">
-          <video poster="" id="vid2vid_video5" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_orangutan_hello.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video6">
-          <video poster="" id="vid2vid_video6" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_truck_zoom.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video7">
-          <video poster="" id="vid2vid_video7" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_fire.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video8">
-          <video poster="" id="vid2vid_video8" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_cats.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video9">
-          <video poster="" id="vid2vid_video9" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_skateboard.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video10">
-          <video poster="" id="vid2vid_video10" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_truck_logs.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video11">
-          <video poster="" id="vid2vid_video11" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_noodles.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video12">
-          <video poster="" id="vid2vid_video12" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_circle.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video13">
-          <video poster="" id="vid2vid_video13" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_orangutan_hello2.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video14">
-          <video poster="" id="vid2vid_video14" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_football.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video15">
-          <video poster="" id="vid2vid_video15" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_orangutan_bath.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video16">
-          <video poster="" id="vid2vid_video16" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_truck_river.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video17">
-          <video poster="" id="vid2vid_video17" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_swans.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video18">
-          <video poster="" id="vid2vid_video18" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_saxophone.mp4">
-          </video>
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <center>
+          <h2 class="title is-3">📑 Background</h2>
+          <img src="static/images/adversarial_test_paradigm.png" alt="Inference Overview" class="center-image" style="transform: scale(0.65); transform-origin: top center; margin-top: 0px;"/>
+          </center>
+          <div class="level-set has-text-justified" style="margin-top: -170px; margin-bottom: 0;">
+            <br>
+            <p>
+              Figure illustrates the adversarial test paradigm levels. Level 1 applies patches offline to image datasets for object detection, dominating existing research but lacking realism. Level 2 introduces more realistic scenarios by analyzing recorded attacked image frames but lacks real-time validation. Level 3 addresses this gap by enabling real-time adversarial testing within simulation environments, crucial for autonomous vehicle evaluation and often overlooked in existing studies.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End vid2vid carousel -->
+
+  <!-- Our Contribution -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-narrow" style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; margin-right: 30px;">
+          <h2 class="title is-3">Our Contribution</h2>
+        </div>
+        <ul style="list-style-type: none; margin-left: 30px;">
+          <li style="margin-bottom: 10px;">
+            <strong>🌟 Motivation and Framework Proposal:</strong> Identified the need for Level 3 adversarial patch testing and addressed the absence of existing frameworks by introducing AVATAR, enabling dynamic robustness evaluation for AVs.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>🌟 Dataset and Model Preparation:</strong> Generated the CARLA Town 10HD (CART) dataset and trained object detection models along with adversarial patches specific to Town 10 in CARLA.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>🌟 Simulation and Patch Integration:</strong> Integrated trained adversarial patches into the CARLA environment by modifying asset blueprints and developed the AVATAR framework for real-time dynamic evaluation.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>🌟 User Interface Development:</strong> Designed a GUI for configuring test parameters, setting up experiments, and running simulations in CARLA.
+          </li>
+          <li style="margin-bottom: 10px;">
+            <strong>🌟 Adversarial Trace Detection:</strong> Proposed the Adversarial Trace Classifier (ATC) to predict the presence of adversarial patches post-simulation, ensuring fair and unbiased evaluation
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End Our Contribution -->
 
 
-<!-- Img2vid carousel -->
+<!-- Patch as Material Asset into CARLA -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths" style="margin-top: 10px;">
+      <!-- Paper video. -->
+      <h2 class="title is-3">🚗 Adversarial Patch in Carla as a Material Asset</h2>
+        <div class="columns is-centered has-text-centered" style="margin-top: 40px;">
+          <div class="column is-two-fifths">
+              <!-- Image embed code here -->
+              <img src="static/images/materialblp.png" alt="material blp" style="transform: scale(1);"/>
+          </div>
+          <div class="column is-three-fifths">
+            <!-- Image embed code here -->
+            <img src="static/images/vehicle_blp.png" alt="vehicle blp" style="transform: scale(0.9); transform-origin: top center;"/>
+          </div>
+        </div>
+        <div class="level-set has-text-justified" style="margin-top: -50px; margin-bottom: 0;">
+          <br>
+          <p>
+            The adversarial patch can be attached to a CARLA actor (e.g., a moving vehicle) or placed statically in the map. The process begins by converting the trained patch image (.png/.jpeg) into a CARLA asset (.uasset) via Unreal Engine (UE). A material instance is created in UE with high roughness and opacity for optimal visibility. Once converted, the patch can be applied to any CARLA asset. For example, as shown in Figure, the patch is affixed to a vehicle’s board, enabling realistic evaluation of its impact on object detection in dynamic, near-real-world scenarios. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Patch as Material Asset into CARLA -->
+
+<section class="section hero is-small is-light"">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">📝 AVATAR Block Diagram</h2>
+          <center>
+          <img src="static/images/avatar_block_diagram.jpg" alt="Block Diagram" class="center-image blend-img-background" style="transform: scale(0.9);"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <br>
+            <p>
+              The AVATAR framework advances Level 3 of adversarial testing by replicating real-world conditions for AV testing. It abstracts the CARLA PythonAPI Client, allowing users to configure parameters and generate a setup file. This file initializes the CARLA environment, loads the object detection model, and applies adversarial patches for experiments. The PyGame window then visualizes the system's behavior under attack in the CARLA simulation. AVATAR enhances adversarial patch testing for autonomous vehicles, ensuring realistic, reproducible, and customizable simulations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small"">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <div class="content" style="margin-top: -10px;">
+          <h2 class="title is-3">🛢️ CART: CARLA Town 10 Dataset</h2>
+          <center>
+          <img src="static/images/catt.png" alt="Block Diagram" class="center-image blend-img-background" style="transform: scale(0.65); margin-top: -70px; margin-bottom: -50px;"/>
+          </center>
+          <span class="link-block">
+            <a href="https://sharmaabhijith.github.io/CARLA_Town10_Dataset/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fa fa-database"></i>
+              </span>
+              <span>CARLA Town 10 Dataset</span>
+            </a>
+          </span>
+          <div class="level-set has-text-justified" style="margin-top: 10px;">
+            <br>
+            <p>
+              The dataset, generated using CARLA’s Town 10 simulation environment, comprises 4,500 photo-realistic images (4,300 for training, 200 for validation) with a resolution of 1280×720 pixels. It features five key object classes: Person, Vehicle, Motorbike, Traffic Light, and Stop Sign. Captured using autopilot driving in dynamic, moving camera scenarios, the dataset covers diverse lighting conditions (noon, sunset, night) and weather settings (rain, clear, fog). The traffic level includes approximately 40 vehicles and 70 pedestrians, ensuring realistic urban scenes. Annotations are provided in YOLO format. CART is useful for training object detection models and adversarial patches for their use in CARLA or in the real-world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3">Image-to-Video</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="img2vid_video1" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_plant.mp4">
-          </video>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths" style="margin-top: 20px;">
+      <!-- Paper video. -->
+      <h2 class="title is-3">🖥️ AVATAR GUI in CARLA</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-fifths" style="margin-top: 20px;">
+            <!-- GUI Image embed code here -->
+            <img src="static/images/avatar_gui.png" alt="AVATAR GUI" style="transform: scale(0.87); transform-origin: top center;"/>
+          </div>
+          <div class="column is-three-fifths" style="margin-top: 20px;">
+            <div class="publication-video" style="display: inline-block; transform: scale(0.85); transform-origin: top center;">
+              <!-- Youtube embed code here -->
+              <iframe src="https://www.youtube.com/embed/g-AqOTro-fY?si=7q17FKDAFmSDrECI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="img2vid_video2" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_buffalo.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="img2vid_video3" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_grizzly.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video4">
-          <video poster="" id="img2vid_video4" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_coffee.mp4">
-          </video>
-        </div>
-
-      <div class="item item-video5">
-          <video poster="" id="img2vid_video5" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_camel.mp4">
-          </video>
-        </div>
-      <div class="item item-video6">
-          <video poster="" id="img2vid_video6" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_pengiun.mp4">
-          </video>
-        </div>
-      <div class="item item-video7">
-          <video poster="" id="img2vid_video7" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_unicorn.mp4">
-          </video>
-        </div>
-
-      <div class="item item-video8">
-          <video poster="" id="img2vid_video8" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_bigfoot.mp4">
-          </video>
+        <div class="level-set has-text-justified" style="margin-top: -70px; margin-bottom: 0;">
+          <br>
+          <p>
+            Tkinter-based GUI featuring four components: CARLA Server Configuration (connects the server, sets seed, mode, and FPS), CARLA World Setting (configures resolution, town, weather, pedestrians, and vehicles), CARLA Actor Setting (sets car model, agent type/behavior, and detection model), and Adversarial Attack Setting (chooses attack type, magnitude, and patch placement on vehicles or billboards). 
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End img2vid carousel -->
+<!-- End youtube video -->
 
-
-<!-- Subject Driven Video Generation carousel -->
+<!-- Adversarial trace Classifier Results -->
 <section class="hero is-small">
-  <div class="hero-body ">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Subject Driven Video Generation</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="sd_video1" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_walking.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="sd_video2" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_drinking.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="sd_video3" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_dancing.mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="sd_video4" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_stretching.mp4">
-          </video>
-        </div>
-        <div class="item item-video5">
-          <video poster="" id="sd_video5" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_magnifying.mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Subject Driven Video Generation carousel -->
-
-
-
-<section class="section hero is-small is-light">
-  <div class="container is-max-desktop">
+  <div class="hero-body">
     <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Method Overview: Mixed Video-Image Finetuning</h2>
-          <center>
-          <img src="static/images/architecture_finetune.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-               Finetuning the video diffusion model on the input video alone limits the extent of motion change. Instead, we use a mixed objective that beside the original objective (bottom left) also finetunes on the unordered set of frames. This is done by using “masked temporal attention”, preventing the temporal attention and convolution from being finetuned (bottom right). This allows adding motion to a static video.
-            </p>
+      <div class="column is-four-fifths">
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered" style="margin-bottom: 30px; margin-top: 10px;">
+          <h2 class="title is-3">⚙️ Adversarial Trace Classifier</h2>
+        </div>
+        <div class="columns is-centered has-text-centered" style="margin-bottom: -150px;">
+          <div class="column is-three-fifths">
+              <!-- Image embed code here -->
+              <img src="static/images/atc.jpg" alt="atc" style="transform: scale(0.85); transform-origin: top center;"/>
+              <img src="static/images/kde_plot.png" alt="atc" style="transform: scale(0.5); transform-origin: top center; margin-top: -70px; margin-bottom: 0;"/>
+          </div>
+          <div class="column is-two-fifths">
+            <!-- Image embed code here -->
+            <img src="static/images/results_trace.jpg" alt="result" style="transform: scale(1); transform-origin: top center;"/>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Inference Overview</h2>
-          <center>
-          <img src="static/images/architecture_applications_extended.png" alt="Inference Overview" class="center-image"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-               Our method supports multiple applications by application dependent pre-processing (left), converting the input content into a uniform video format. For image-to-video, the input image is duplicated and transformed using perspective transformations, synthesizing a coarse video with some camera motion. For subject driven video generation, the input is omitted -  finetuning alone take care of the fidelity.
-               This coarse video is then edited using our general ``Dreamix Video Editor`` (right): we first corrupt the video by downsampling followed by adding noise. We then apply the finetuned text-guided video diffusion model, which upscales the video to the final spatio-temporal resolution
-            </p>
-          </div>
+        <div>
+          <ul style="list-style-type: disc; margin-left: 30px;">
+            <li style="margin-bottom: 10px;">Simulations were conducted to evaluate YOLO's confidence scores for detecting vehicles under normal and adversarial conditions.</li>
+            <li style="margin-bottom: 10px;">Normal conditions showed consistent confidence scores (&gt;85%) across diverse weather and lighting scenarios, indicating model robustness.</li>
+            <li style="margin-bottom: 10px;">Adversarial patches caused significant confidence drops and higher variance, especially under optimal lighting (clear noon).</li>
+            <li style="margin-bottom: 10px;">Adversarial patch effectiveness reduced in poor visibility scenarios like rain, dust storms, and nighttime conditions.</li>
+            <li style="margin-bottom: 10px;">Statistical analysis included 100 traces: 40 nominal and 60 adversarial, with random vehicle starting points.</li>
+            <li style="margin-bottom: 10px;">Kernel Density Estimation (KDE) effectively distinguished nominal (tight cluster) and anomalous traces (spread peaks).</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<!-- End Adversarial trace Classifier Results -->
 
 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-centered has-text-centered" style="margin-bottom: 20px;">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">🎥 Video Presentation</h2>
+      <div class="columns is-centered has-text-centered" style="margin-top: 10px;">
         <div class="column is-four-fifths">
 
-          <div class="publication-video">
+          <div class="publication-video" style="display: inline-block; transform: scale(0.8); transform-origin: top center;  margin-bottom: -80px;">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/xcvnHhfDSGM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/w9M6zNpd9Es?si=XcHGbTthqdhHrX-4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -436,13 +401,15 @@
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{molad2023dreamix,
-  title={Dreamix: Video Diffusion Models are General Video Editors},
-  author={Molad, Eyal and Horwitz, Eliahu and Valevski, Dani and Acha, Alex Rav and Matias, Yossi and Pritch, Yael and Leviathan, Yaniv and Hoshen, Yedid},
-  journal={arXiv preprint arXiv:2302.01329},
-  year={2023}
-}</code></pre>
+    <h2 class="title">📚 BibTeX</h2>
+    <pre><code>@article{sharma2024avatar,
+      title={AVATAR: Autonomous Vehicle Assessment through Testing of Adversarial Patches in Real-time},
+      author={Sharma, Abhijith and Narayan, Apurva and Azad, Nasser Lashgarian and Fischmeister, Sebastian and Marksteiner, Stefan},
+      journal={IEEE Transactions on Intelligent Vehicles},
+      year={2024},
+      publisher={IEEE}
+    }
+</code></pre>
   </div>
 </section>
 <!-- End BibTex citation -->
@@ -450,8 +417,8 @@
 <!--Acknowledgements -->
 <section class="section" id="Acknowledgements">
   <div class="container is-max-desktop content">
-    <h2 class="title">Acknowledgements</h2>
-  We thank Ely Sarig for creating the video, Jay Tenenbaum for the video narration, Amir Hertz for the implementation of our eval baseline, Daniel Cohen-Or, Assaf Zomet, Eyal Segalis, Matan Kalman and Emily Denton for their valuable inputs that helped improve this work.
+    <h2 class="title">🙏 Acknowledgements</h2>
+    We extend our gratitude to the members of the <a href="https://uwaterloo.ca/embedded-software-group/" target="_blank">Real-time Embedded Software Group</a> @UWaterloo for their invaluable insights, critical brainstorming sessions, and innovative ideas that greatly contributed to this work.
   </div>
 </section>
 <!--End Acknowledgements -->
@@ -473,27 +440,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Statcounter tracking code -->
-
-<!-- Default Statcounter code for Dreamix
-https://dreamix-video-editing.github.io -->
-<script type="text/javascript">
-var sc_project=12843789; 
-var sc_invisible=1; 
-var sc_security="e9c3bf5f"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/12843789/0/e9c3bf5f/1/"
-alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-
-<!-- End of Statcounter Code -->
 
 </body>
 </html>
